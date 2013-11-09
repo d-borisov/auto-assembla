@@ -5,7 +5,7 @@ Assembla routines automation
 
 Assembla public workspace: https://www.assembla.com/spaces/auto-assembla
 
-Developer: Dmitry Borisov d.borisov.mail@gnail.com
+Developer: Dmitry Borisov d.borisov.mail@gmail.com
 
 Used libraries:
 - Java 8 ea
