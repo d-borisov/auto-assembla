@@ -12,7 +12,12 @@ javascript:(function () {
     function linkToTickets(url, dataStart) {
         var data = url.substring(dataStart);
         var ticketNumStart = data.substring(0, 17) == "cardwall#/ticket:" ? 17 : 0;
-        var ticketNum = /[0-9]+/.exec(data.substring(ticketNumStart))[0];
+        var ticketNumList = /[0-9]+/.exec(data.substring(ticketNumStart));
+        if (!ticketNumList) {
+            unexpectedUrl("Cant find ticket number in url");
+            return null;
+        }
+        var ticketNum = ticketNumList[0];
         if (!ticketNum) {
             unexpectedUrl("Cant find ticket number");
             return null;
