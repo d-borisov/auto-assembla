@@ -44,7 +44,7 @@ javascript:(function () {
             unexpectedUrl("Cant find assembla space prefix");
             return null;
         }
-        var spaceName = /[-a-z0-9]+\//i.exec(url.substring(24))[0];
+        var spaceName = /[-a-z0-9_]+\//i.exec(url.substring(24))[0];
         if (!spaceName) {
             unexpectedUrl("Cant find assembla space name");
             return null;
